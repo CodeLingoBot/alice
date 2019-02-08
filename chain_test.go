@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-// A constructor for middleware
+// tagMiddleware; A constructor for middleware
 // that writes its own "tag" into the RW and does nothing else.
 // Useful in checking if a chain is behaving in the right order.
 func tagMiddleware(tag string) Constructor {
@@ -20,7 +20,7 @@ func tagMiddleware(tag string) Constructor {
 	}
 }
 
-// Not recommended (https://golang.org/pkg/reflect/#Value.Pointer),
+// funcsEqual; Not recommended (https://golang.org/pkg/reflect/#Value.Pointer),
 // but the best we can do.
 func funcsEqual(f1, f2 interface{}) bool {
 	val1 := reflect.ValueOf(f1)
